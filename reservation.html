@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bella's B - Ordena ahora</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">    
+
+    <link rel="stylesheet" href="css/style.css">    
+
+    <link rel="stylesheet" href="css/classic.css">    
+	<link rel="stylesheet" href="css/classic.date.css">    
+	<link rel="stylesheet" href="css/classic.time.css">    
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet" href="css/custom.css">
+
+</head>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5N4C5L34H8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5N4C5L34H8');
+</script>
+
+
+
+<body>
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container">
+				<a class="navbar-brand" href="index.html">
+					<img src="images/logo.png" alt="" id="logo"/>
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-rs-food">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+						<li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+						<li class="nav-item"><a class="nav-link" href="about.html">Sobre mi</a></li>
+						<li class="nav-item active dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Paginas</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item active" href="reservation.html">Realiza tu pedido</a>
+								<a class="dropdown-item" href="gallery.html">Galeria</a>
+							</div>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="login2.php">Iniciar sesión</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	
+	<!-- Start All Pages -->
+	<div class="all-page-title page-breadcrumb">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>Ordena ahora</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End All Pages -->
+	
+	<!-- Start Reservation -->
+	<div class="reservation-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="heading-title text-center">
+						<h2>Ordena ahora</h2>
+						<p>¿Antojo de algo dulce o tienes un evento especial en puerta? Haz tu pedido fácilmente y déjanos endulzar tu día con nuestras creaciones artesanales.</p>
+					</div>
+				</div>
+			</div>
+			<form id="orderForm">
+			<div class="row">
+				<!-- Detalles del Pedido -->
+				<div class="col-md-6">
+					<h3>Detalles del Pedido</h3>
+
+					<div class="form-group col-md-12">
+						<input name="date" type="date" class="form-control" placeholder="Fecha de entrega*" required>
+					</div>
+
+					<div class="form-group col-md-12">
+						<input name="time" type="time" class="form-control" placeholder="Hora de entrega*" required>
+					</div>
+
+					<div class="form-group col-md-12">
+						<textarea name="order_details" rows="4" class="form-control" placeholder="¿Qué te gustaría ordenar?*" required></textarea>
+					</div>
+				</div>
+
+				<!-- Datos de Contacto -->
+				<div class="col-md-6">
+					<h3>Datos de Contacto</h3>
+
+					<div class="form-group col-md-12">
+						<input name="name" type="text" class="form-control" placeholder="Tu nombre*" required>
+					</div>
+
+					<div class="form-group col-md-12">
+						<input name="email" type="email" class="form-control" placeholder="Tu correo electrónico*" required>
+					</div>
+
+					<div class="form-group col-md-12">
+						<input name="phone" type="text" class="form-control" placeholder="Tu número de teléfono*" required>
+					</div>
+				</div>
+
+				<!-- Botón Enviar -->
+				<div class="col-md-12 text-center">
+					<button type="submit" class="btn btn-common">Enviar Pedido</button>
+					<div id="msgSubmit" class="text-center"></div>
+				</div>
+			</div>
+			</form>
+				<!-- Mensaje de confirmacion -->
+				<script src="js/Reserva.js"></script>
+		</div>
+	</div>
+	<!-- End Reservation -->
+	<!-- Start Customer Reviews -->
+	<div class="customer-reviews-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="heading-title text-center">
+						<h2>Opiniones de Nuestros Clientes</h2>
+    						<p>Lo que nuestros clientes dicen sobre la experiencia de disfrutar nuestros postres y pasteles hechos con amor.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8 mr-auto ml-auto text-center">
+					<div id="reviews" class="carousel slide" data-ride="carousel">
+						<div class="carousel-inner mt-4">
+							<div class="carousel-item text-center active">
+								<div class="img-box p-1 border rounded-circle m-auto">
+									<img class="d-block w-100 rounded-circle" src="images/profile-1.jpg" alt="">
+								</div>
+								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Mariana Torres</strong></h5>
+								<h6 class="text-dark m-0">Diseñadora Gráfica</h6>
+								<p class="m-0 pt-3">El pastel que encargué para el cumpleaños de mi hija fue simplemente espectacular. No solo era hermoso, ¡sabía delicioso! Todos los invitados preguntaron dónde lo había comprado.</p>
+							</div>
+							<div class="carousel-item text-center">
+								<div class="img-box p-1 border rounded-circle m-auto">
+									<img class="d-block w-100 rounded-circle" src="images/profile-3.jpg" alt="">
+								</div>
+								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Carlos Hernández</strong></h5>
+								<h6 class="text-dark m-0">Emprendedor</h6>
+								<p class="m-0 pt-3">Siempre que necesito un detalle especial para mis eventos, recurro a Bella's Bakery. El panqué de zanahoria es mi favorito, y el trato es excelente. ¡100% recomendado!</p>
+							</div>
+							<div class="carousel-item text-center">
+								<div class="img-box p-1 border rounded-circle m-auto">
+									<img class="d-block w-100 rounded-circle" src="images/profile-7.jpg" alt="">
+								</div>
+								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Ana Sofía Ruiz</strong></h5>
+								<h6 class="text-dark m-0">Maestra de Primaria</h6>
+								<p class="m-0 pt-3">Pedí una mesa de postres para una fiesta escolar y todo quedó perfecto. Los vasitos de tiramisú volaron. Se nota el amor en cada detalle.</p>
+							</div>
+						</div>
+						<a class="carousel-control-prev" href="#reviews" role="button" data-slide="prev">
+							<i class="fa fa-angle-left" aria-hidden="true"></i>
+							<span class="sr-only">Anterior</span>
+						</a>
+						<a class="carousel-control-next" href="#reviews" role="button" data-slide="next">
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+							<span class="sr-only">Siguiente</span>
+						</a>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Customer Reviews -->
+	<!-- Start Contact info -->
+	<div class="contact-imfo-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<i class="fa fa-volume-control-phone"></i>
+					<div class="overflow-hidden">
+						<h4>Telefono</h4>
+						<p class="lead">
+							+52 667 123 4567
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<i class="fa fa-envelope"></i>
+					<div class="overflow-hidden">
+						<h4>Email</h4>
+						<p class="lead">
+							contacto@bellasbakery.com
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<i class="fa fa-map-marker"></i>
+					<div class="overflow-hidden">
+						<h4>Ubicacion</h4>
+						<p class="lead">
+							Calle Dulce #123, Colonia Centro, Culiacán, Sinaloa, México
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer-area bg-f">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<h3>Sobre Nosotros</h3>
+					<p>En Bella's Bakery creemos que cada postre cuenta una historia. Somos una pastelería artesanal dedicada a crear momentos dulces e inolvidables con productos hechos con amor, ingredientes de calidad y un toque especial en cada detalle. Desde pasteles personalizados hasta panqués y postres para toda ocasión, nuestra pasión es endulzar tu vida con creatividad y sabor.</p>
+
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Horario de atencion</h3>
+					<p><span class="text-color">Apertura: </span>Cierre</p>
+					<p><span class="text-color">Lun-Mier :</span> 9Am - 10Pm</p>
+					<p><span class="text-color">Jue-Vier :</span> 9Am - 10Pm</p>
+					<p><span class="text-color">Sabados :</span> 10Am - 5Pm</p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Información de Contacto</h3>
+					<p class="lead">Calle Dulce #123, Colonia Centro, Culiacán, Sinaloa, México</p>
+					<p class="lead"><a href="tel:+526671234567">+52 667 123 4567</a></p>
+					<p><a href="mailto:contacto@bellasbakery.com">contacto@bellasbakery.com</a></p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Suscribete</h3>
+					<div class="subscribe_form">
+						<form class="subscribe_form">
+							<input name="EMAIL" id="subs-email" class="form_input" placeholder="Correo electronico..." type="email">
+							<button type="submit" class="submit">Suscribete</button>
+							<div class="clearfix"></div>
+						</form>
+					</div>
+					<ul class="list-inline f-social">
+						<li class="list-inline-item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<p class="company-name">Todos los derechos reservados. &copy; 2025 <a href="">Bella's Bakery</a> | Diseño por <a href="styleguide.html">NathWorks</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</footer>
+	
+	<a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<script src="js/jquery.superslides.min.js"></script>
+	<script src="js/images-loded.min.js"></script>
+	<script src="js/isotope.min.js"></script>
+	<script src="js/baguetteBox.min.js"></script>
+	<script src="js/form-validator.min.js"></script>
+    <script src="js/contact-form-script.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>
